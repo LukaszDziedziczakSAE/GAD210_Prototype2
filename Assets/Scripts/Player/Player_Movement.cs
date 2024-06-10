@@ -15,7 +15,7 @@ public class Player_Movement : MonoBehaviour
         player = GetComponent<Player>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (player.Input.Movement.magnitude > 0)
         {
