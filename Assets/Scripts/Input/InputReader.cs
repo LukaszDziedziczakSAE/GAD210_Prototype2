@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
 
     [field: SerializeField] public Vector2 Movement { get; private set; }
     [field: SerializeField] public Vector2 Look { get; private set; }
+    public event Action OnInteractPress;
 
     private void Awake()
     {
@@ -25,5 +27,10 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
     public void OnMovement(InputAction.CallbackContext context)
     {
         Movement = context.ReadValue<Vector2>();
+    }
+
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        if (context.performed) OnInteractPress?.Invoke();
     }
 }

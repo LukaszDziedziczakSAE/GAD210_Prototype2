@@ -4,9 +4,10 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-public abstract class StatChangingArea : MonoBehaviour
+public class StatChangingArea : MonoBehaviour
 {
-    protected System.Type statType { get; set; }
+    [SerializeField, UClassSelector(typeof(Stat_Base))] string type;
+    protected System.Type statType => Type.GetType(type);
     [SerializeField, Tooltip("How fast the stat will change")] protected float changeRate;
     [SerializeField, Tooltip("How much value will change in total, -1 means unlimited")] protected float amountToChange = -1;
 

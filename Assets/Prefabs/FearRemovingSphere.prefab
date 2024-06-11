@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72229ecb96b002849be94a2b20f02d6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  area: {fileID: 912752228010867313}
+  area: {fileID: 0}
 --- !u!1 &8735749520332522672
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,8 +106,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9043317018414795561}
-  - component: {fileID: 912752228010867313}
   - component: {fileID: 4751484842594907102}
+  - component: {fileID: 4407143949294782959}
   m_Layer: 0
   m_Name: FearRemovingSphere
   m_TagString: Untagged
@@ -131,20 +131,6 @@ Transform:
   - {fileID: 5785705941253662322}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &912752228010867313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8735749520332522672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 344350f6c5ecfea49abafc9507504c44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  changeRate: -10
-  amountToChange: -1
 --- !u!135 &4751484842594907102
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -166,3 +152,18 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 2.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4407143949294782959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8735749520332522672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f6b688aab8bf140a535f872cfa3fc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: Stat_Fear
+  changeRate: -10
+  amountToChange: -1

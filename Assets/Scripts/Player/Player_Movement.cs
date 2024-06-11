@@ -15,6 +15,12 @@ public class Player_Movement : MonoBehaviour
         player = GetComponent<Player>();
     }
 
+    private void Start()
+    {
+        player.Camera.transform.localEulerAngles = Vector3.zero;
+        player.transform.localEulerAngles = Vector3.zero;
+    }
+
     private void FixedUpdate()
     {
         if (player.Input.Movement.magnitude > 0)
@@ -46,6 +52,10 @@ public class Player_Movement : MonoBehaviour
             else if (camRotEuler.x < 180 && camRotEuler.x > maxRotationAngle)
             {
                 camRotEuler.x = maxRotationAngle;
+            }
+            else if (camRotEuler.x > maxRotationAngle && camRotEuler.x < 360-maxRotationAngle)
+            {
+                camRotEuler.x = 0;
             }
             player.Camera.transform.localRotation = Quaternion.Euler(camRotEuler.x, camRotEuler.y, camRotEuler.z);
         }

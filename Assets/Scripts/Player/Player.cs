@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     [field: SerializeField] public InputReader Input { get; private set; }
     [field: SerializeField] public Player_Movement Movement { get; private set; }
     [field: SerializeField] public Camera Camera { get; private set; }
+    [field: SerializeField] public Player_PickUp PickUp { get; private set; }
 
     private void Awake()
     {
