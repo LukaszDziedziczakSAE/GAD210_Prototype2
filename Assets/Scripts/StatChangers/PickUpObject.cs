@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUpObject : MonoBehaviour
+public class PickUpObject : MonoBehaviour, IInteractable
 {
     StatChangingObject statChangingObject;
 
@@ -16,5 +16,15 @@ public class PickUpObject : MonoBehaviour
         if (statChangingObject != null) statChangingObject.BeginStatChange();
 
         Destroy(gameObject);
+    }
+
+    public void Interact()
+    {
+        PickUp();
+    }
+
+    public string InteractionLabel()
+    {
+        return "Pick Up";
     }
 }
