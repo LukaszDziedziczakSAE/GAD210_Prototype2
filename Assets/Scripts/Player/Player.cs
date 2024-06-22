@@ -18,14 +18,14 @@ public class Player : MonoBehaviour
         if (Instance == null) Instance = this;
         else Destroy(Instance);
 
-        UI.Stats.DrawStatList();
+        
     }
 
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
+        UI.Stats.DrawStatList();
     }
 
     public static Stat_Base[] Stats
