@@ -9,14 +9,52 @@ public class UI : MonoBehaviour
     [SerializeField] UI_Stats stats;
     [SerializeField] UI_InteractIndicator leftInteractIndicator;
     [SerializeField] UI_InteractIndicator rightInteractIndicator;
+    [SerializeField] UI_ActionBar actionBar;
+    [SerializeField] GameObject mainMenu;
+    [SerializeField] GameObject gameUI;
 
     public static UI_Stats Stats => Instance.stats;
     public static UI_InteractIndicator LeftInteractIndicator => Instance.leftInteractIndicator;
     public static UI_InteractIndicator RightInteractIndicator => Instance.rightInteractIndicator;
+    public static UI_ActionBar ActionBar => Instance.actionBar;
+    public static bool ShowingMainMenu => Instance.mainMenu.activeSelf;
 
     private void Awake()
     {
         if (Instance == null) Instance = this;
         else Destroy(Instance);
+    }
+
+    private void Start()
+    {
+        SwitchToMainMenu();
+    }
+
+    public static void ShowCursor(bool show)
+    {
+        if (show)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+    }
+
+    public void SwitchToMainMenu()
+    {
+        gameUI.SetActive(false);
+        mainMenu.SetActive(true);
+        ShowCursor(true);
+    }
+
+    public void SwitchToGameUI()
+    {
+        mainMenu.SetActive(false);
+        gameUI.SetActive(true);
+        ShowCursor(false);
     }
 }

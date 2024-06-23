@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     [field: SerializeField] public Player_Movement Movement { get; private set; }
     [field: SerializeField] public Camera Camera { get; private set; }
     [field: SerializeField] public Player_Interact Interact { get; private set; }
+    [field: SerializeField] public Player_ActionBar ActionBar { get; private set; }
 
     private void Awake()
     {
@@ -23,8 +24,6 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
         UI.Stats.DrawStatList();
     }
 

@@ -23,6 +23,8 @@ public class Player_Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (UI.ShowingMainMenu) return;
+
         if (player.Input.Movement.magnitude > 0)
         {
             Vector3 forwardMovement = player.Input.Movement.y * transform.forward * movementSpeed * Time.deltaTime;

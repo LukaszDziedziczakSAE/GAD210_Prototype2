@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e53b6f36d6f09a54aaa673810370cabe, type: 3}
+  m_Name: Tea_Pot
+  m_EditorClassIdentifier: 
+  <ItemName>k__BackingField: Tea Pot
+  <Icon>k__BackingField: {fileID: 2800000, guid: 18983ebdac0bd2f48813b404c7a388a5,
+    type: 3}
+  <Prefab>k__BackingField: {fileID: 4346281860394056716, guid: 0e01c1afd52f3194eb21cbebc4e4e0b4,
+    type: 3}
