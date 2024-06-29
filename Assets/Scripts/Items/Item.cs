@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    [SerializeField] ItemConfig config;
+    [field: SerializeField] public ItemConfig Config { get; private set; }
 }

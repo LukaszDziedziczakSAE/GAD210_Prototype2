@@ -53,6 +53,60 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Action Slot 1"",
+                    ""type"": ""Button"",
+                    ""id"": ""0af1f760-5243-4a57-abfa-11c7d2c1191a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Action Slot 2"",
+                    ""type"": ""Button"",
+                    ""id"": ""51757118-8b44-4271-a79f-5d719fd0f76e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Action Slot 3"",
+                    ""type"": ""Button"",
+                    ""id"": ""d4d59ed7-1558-43c2-b686-ecb7f599bf40"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Action Slot 4"",
+                    ""type"": ""Button"",
+                    ""id"": ""610e2005-3169-4fbc-863e-eecf5686d1a0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Action Slot 5"",
+                    ""type"": ""Button"",
+                    ""id"": ""f86fc020-c425-4f6e-8abd-f90dc4d0b814"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""e2eebf48-e196-4e47-a8f5-fd88abe6b4c4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -143,6 +197,72 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""07a6af84-cd8d-43fa-85b0-e2257f734c21"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Action Slot 1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0e4f076f-a3b3-4c13-9f1b-ab4e7af346ba"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Action Slot 2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dd48d420-100b-4ca7-87c0-e1c1f7ef4ad9"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Action Slot 3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2a69444c-68f0-4986-b96a-434c7de0945e"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Action Slot 4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3ea7820c-b3ba-4b80-bba0-97c9781f41a8"",
+                    ""path"": ""<Keyboard>/5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Action Slot 5"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""972f6689-b3d3-4ee7-862b-c5260e202d03"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -160,6 +280,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
+        m_Player_ActionSlot1 = m_Player.FindAction("Action Slot 1", throwIfNotFound: true);
+        m_Player_ActionSlot2 = m_Player.FindAction("Action Slot 2", throwIfNotFound: true);
+        m_Player_ActionSlot3 = m_Player.FindAction("Action Slot 3", throwIfNotFound: true);
+        m_Player_ActionSlot4 = m_Player.FindAction("Action Slot 4", throwIfNotFound: true);
+        m_Player_ActionSlot5 = m_Player.FindAction("Action Slot 5", throwIfNotFound: true);
+        m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -224,6 +350,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Movement;
     private readonly InputAction m_Player_Interact;
+    private readonly InputAction m_Player_ActionSlot1;
+    private readonly InputAction m_Player_ActionSlot2;
+    private readonly InputAction m_Player_ActionSlot3;
+    private readonly InputAction m_Player_ActionSlot4;
+    private readonly InputAction m_Player_ActionSlot5;
+    private readonly InputAction m_Player_Pause;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
@@ -231,6 +363,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
+        public InputAction @ActionSlot1 => m_Wrapper.m_Player_ActionSlot1;
+        public InputAction @ActionSlot2 => m_Wrapper.m_Player_ActionSlot2;
+        public InputAction @ActionSlot3 => m_Wrapper.m_Player_ActionSlot3;
+        public InputAction @ActionSlot4 => m_Wrapper.m_Player_ActionSlot4;
+        public InputAction @ActionSlot5 => m_Wrapper.m_Player_ActionSlot5;
+        public InputAction @Pause => m_Wrapper.m_Player_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -249,6 +387,24 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
+            @ActionSlot1.started += instance.OnActionSlot1;
+            @ActionSlot1.performed += instance.OnActionSlot1;
+            @ActionSlot1.canceled += instance.OnActionSlot1;
+            @ActionSlot2.started += instance.OnActionSlot2;
+            @ActionSlot2.performed += instance.OnActionSlot2;
+            @ActionSlot2.canceled += instance.OnActionSlot2;
+            @ActionSlot3.started += instance.OnActionSlot3;
+            @ActionSlot3.performed += instance.OnActionSlot3;
+            @ActionSlot3.canceled += instance.OnActionSlot3;
+            @ActionSlot4.started += instance.OnActionSlot4;
+            @ActionSlot4.performed += instance.OnActionSlot4;
+            @ActionSlot4.canceled += instance.OnActionSlot4;
+            @ActionSlot5.started += instance.OnActionSlot5;
+            @ActionSlot5.performed += instance.OnActionSlot5;
+            @ActionSlot5.canceled += instance.OnActionSlot5;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -262,6 +418,24 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
+            @ActionSlot1.started -= instance.OnActionSlot1;
+            @ActionSlot1.performed -= instance.OnActionSlot1;
+            @ActionSlot1.canceled -= instance.OnActionSlot1;
+            @ActionSlot2.started -= instance.OnActionSlot2;
+            @ActionSlot2.performed -= instance.OnActionSlot2;
+            @ActionSlot2.canceled -= instance.OnActionSlot2;
+            @ActionSlot3.started -= instance.OnActionSlot3;
+            @ActionSlot3.performed -= instance.OnActionSlot3;
+            @ActionSlot3.canceled -= instance.OnActionSlot3;
+            @ActionSlot4.started -= instance.OnActionSlot4;
+            @ActionSlot4.performed -= instance.OnActionSlot4;
+            @ActionSlot4.canceled -= instance.OnActionSlot4;
+            @ActionSlot5.started -= instance.OnActionSlot5;
+            @ActionSlot5.performed -= instance.OnActionSlot5;
+            @ActionSlot5.canceled -= instance.OnActionSlot5;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -293,5 +467,11 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnLook(InputAction.CallbackContext context);
         void OnMovement(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+        void OnActionSlot1(InputAction.CallbackContext context);
+        void OnActionSlot2(InputAction.CallbackContext context);
+        void OnActionSlot3(InputAction.CallbackContext context);
+        void OnActionSlot4(InputAction.CallbackContext context);
+        void OnActionSlot5(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }

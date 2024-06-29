@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e53b6f36d6f09a54aaa673810370cabe, type: 3}
+  m_Name: Cup
+  m_EditorClassIdentifier: 
+  <ItemName>k__BackingField: Cup
+  <Icon>k__BackingField: {fileID: 2800000, guid: 6433a4f039caedc44bdd71328c57ec17,
+    type: 3}
+  <Prefab>k__BackingField: {fileID: 8091880571209990397, guid: 88303cf338b52e64ab75e3dcffda80f8,
+    type: 3}
+  <MaxVolume>k__BackingField: 30

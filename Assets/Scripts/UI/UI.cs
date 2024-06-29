@@ -28,6 +28,12 @@ public class UI : MonoBehaviour
     private void Start()
     {
         SwitchToMainMenu();
+        Player.Instance.Input.OnPauseKeyPress += PauseGame;
+    }
+
+    private void OnDisable()
+    {
+        Player.Instance.Input.OnPauseKeyPress -= PauseGame;
     }
 
     public static void ShowCursor(bool show)
@@ -56,5 +62,19 @@ public class UI : MonoBehaviour
         mainMenu.SetActive(false);
         gameUI.SetActive(true);
         ShowCursor(false);
+    }
+
+    public static void PauseGame()
+    {
+        if (Instance.gameUI.activeSelf)
+        {
+            Time.timeScale = 0;
+            Instance.SwitchToMainMenu();
+        }
+        else
+        {
+            Time.timeScale = 1;
+            Instance.SwitchToGameUI();
+        }
     }
 }

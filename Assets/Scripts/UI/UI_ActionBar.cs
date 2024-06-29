@@ -54,4 +54,5 @@ public class UI_ActionBar : MonoBehaviour
             slot.UpdateSlot();
         }
     }
+
 }

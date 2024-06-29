@@ -11,6 +11,12 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
     [field: SerializeField] public Vector2 Movement { get; private set; }
     [field: SerializeField] public Vector2 Look { get; private set; }
     public event Action OnInteractPress;
+    public event Action OnActionSlot1Press;
+    public event Action OnActionSlot2Press;
+    public event Action OnActionSlot3Press;
+    public event Action OnActionSlot4Press;
+    public event Action OnActionSlot5Press;
+    public event Action OnPauseKeyPress;
 
     private void Awake()
     {
@@ -32,5 +38,35 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
     public void OnInteract(InputAction.CallbackContext context)
     {
         if (context.performed) OnInteractPress?.Invoke();
+    }
+
+    public void OnActionSlot1(InputAction.CallbackContext context)
+    {
+        if (context.performed) OnActionSlot1Press?.Invoke();
+    }
+
+    public void OnActionSlot2(InputAction.CallbackContext context)
+    {
+        if (context.performed) OnActionSlot2Press?.Invoke();
+    }
+
+    public void OnActionSlot3(InputAction.CallbackContext context)
+    {
+        if (context.performed) OnActionSlot3Press?.Invoke();
+    }
+
+    public void OnActionSlot4(InputAction.CallbackContext context)
+    {
+        if (context.performed) OnActionSlot4Press?.Invoke();
+    }
+
+    public void OnActionSlot5(InputAction.CallbackContext context)
+    {
+        if (context.performed) OnActionSlot5Press?.Invoke();
+    }
+
+    public void OnPause(InputAction.CallbackContext context)
+    {
+        if (context.performed) OnPauseKeyPress?.Invoke();
     }
 }

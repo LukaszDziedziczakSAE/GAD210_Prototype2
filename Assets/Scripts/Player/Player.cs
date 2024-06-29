@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     [field: SerializeField] public Camera Camera { get; private set; }
     [field: SerializeField] public Player_Interact Interact { get; private set; }
     [field: SerializeField] public Player_ActionBar ActionBar { get; private set; }
+    [field: SerializeField] public Inventory Inventory { get; private set; }
+    [field: SerializeField] public Player_ObjectInHand ObjectInHand { get; private set; }
 
     private void Awake()
     {

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Tea_Pot
   m_EditorClassIdentifier: 
   <ItemName>k__BackingField: Tea Pot
-  <Icon>k__BackingField: {fileID: 2800000, guid: 18983ebdac0bd2f48813b404c7a388a5,
+  <Icon>k__BackingField: {fileID: 2800000, guid: 7b1ad46dd3b9ac34ba233e161788771c,
     type: 3}
   <Prefab>k__BackingField: {fileID: 4346281860394056716, guid: 0e01c1afd52f3194eb21cbebc4e4e0b4,
     type: 3}
+  <MaxVolume>k__BackingField: 120

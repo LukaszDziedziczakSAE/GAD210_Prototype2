@@ -11,6 +11,10 @@ public class Inventory : MonoBehaviour
     {
         public ItemConfig Item;
         public int Quantity;
+        public float Volume;
+
+        public float VolumePercentage => Volume / Item.MaxVolume;
+        public bool IsFull => VolumePercentage == 1;
 
         public InvItem(ItemConfig item)
         {
@@ -39,5 +43,33 @@ public class Inventory : MonoBehaviour
                 Quantity -= quantity;
             }
         }
+    }
+
+    public void Add(InvItem newItems)
+    {
+        bool foundInventory = false;
+        foreach (InvItem invItem in InvItems)
+        {
+            if (invItem.Item == newItems.Item)
+            {
+                invItem.Quantity += newItems.Quantity;
+                foundInventory = true;
+            }
+        }
+
+        if (!foundInventory)
+        {
+            InvItems.Add(newItems);
+        }
+    }
+
+    public void Add(ItemConfig itemConfig)
+    {
+        Add(new InvItem(itemConfig));
+    }
+
+    public void Add(ItemConfig itemConfig, int quantity)
+    {
+        Add(new InvItem(itemConfig, quantity));
     }
 }

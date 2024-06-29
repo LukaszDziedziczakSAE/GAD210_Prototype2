@@ -26,6 +26,8 @@ public class Player_Interact : MonoBehaviour
 
     private void Update()
     {
+        if (player.ObjectInHand.HasObjectInHand) return;
+
         Ray ray = player.Camera.ScreenPointToRay(new Vector3(Screen.width/2, Screen.height/2, 0));
         Debug.DrawRay(ray.origin, ray.direction * maxDistance);
         if (Physics.Raycast(ray, out RaycastHit hit, maxDistance))
