@@ -7,6 +7,8 @@ public class ItemConfig : ScriptableObject
 {
     [field: SerializeField] public string ItemName { get; private set; }
     [field: SerializeField] public Texture Icon { get; private set; }
+    [field: SerializeField] public Texture WarmIcon { get; private set; }
+    [field: SerializeField] public Texture ColdIcon { get; private set; }
     [field: SerializeField] public GameObject Prefab { get; private set; }
     [field: SerializeField] public float MaxVolume { get; private set; }
 }

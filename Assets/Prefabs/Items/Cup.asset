@@ -15,6 +15,9 @@ MonoBehaviour:
   <ItemName>k__BackingField: Cup
   <Icon>k__BackingField: {fileID: 2800000, guid: 6433a4f039caedc44bdd71328c57ec17,
     type: 3}
+  <WarmIcon>k__BackingField: {fileID: 2800000, guid: 7005c250ceba34c499b99ab3a883ed03,
+    type: 3}
+  <ColdIcon>k__BackingField: {fileID: 0}
   <Prefab>k__BackingField: {fileID: 8091880571209990397, guid: 88303cf338b52e64ab75e3dcffda80f8,
     type: 3}
   <MaxVolume>k__BackingField: 30

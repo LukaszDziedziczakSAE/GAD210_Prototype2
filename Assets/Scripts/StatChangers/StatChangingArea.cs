@@ -25,12 +25,14 @@ public class StatChangingArea : MonoBehaviour
             {
                 float amount = changeRate * Time.deltaTime;
                 playerStat.Add(amount);
+                Debug.Log(type + ": " + playerStat.Current);
             }
 
             else if (changeRate < 0 && !playerStat.AtZero)
             {
                 float amount = -changeRate * Time.deltaTime;
                 playerStat.Remove(amount);
+                Debug.Log(type + ": " + playerStat.Current);
             }
         }
 
@@ -41,6 +43,8 @@ public class StatChangingArea : MonoBehaviour
                 float amount = Mathf.Min(changeRate * Time.deltaTime, amountToChange);
                 playerStat.Add(amount);
                 amountToChange -= amount;
+
+                Debug.Log(type + ": " + playerStat.Current);
 
                 if (amountToChange == 0)
                 {
@@ -53,6 +57,8 @@ public class StatChangingArea : MonoBehaviour
                 float amount = Mathf.Min(-changeRate * Time.deltaTime, amountToChange);
                 playerStat.Remove(amount);
                 amountToChange -= amount;
+
+                Debug.Log(type + ": " + playerStat.Current);
 
                 if (amountToChange == 0)
                 {
@@ -67,6 +73,9 @@ public class StatChangingArea : MonoBehaviour
         if (other.TryGetComponent<Player>(out Player player))
         {
             playerStat = player.GetStat(statType);
+            Debug.Log("Player entered " + name + " (" + playerStat.ToString() + ")");
+
+            if (playerStat == null) Debug.LogError("Missing " + type + " type");
         }
     }
 
@@ -75,6 +84,7 @@ public class StatChangingArea : MonoBehaviour
         if (other.TryGetComponent<Player>(out Player player) && playerStat == player.GetStat(statType))
         {
             playerStat = null;
+            Debug.Log("Player exited " + name);
         }
     }
 }

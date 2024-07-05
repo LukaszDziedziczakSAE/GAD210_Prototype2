@@ -15,6 +15,10 @@ MonoBehaviour:
   <ItemName>k__BackingField: Tea Pot
   <Icon>k__BackingField: {fileID: 2800000, guid: 7b1ad46dd3b9ac34ba233e161788771c,
     type: 3}
+  <WarmIcon>k__BackingField: {fileID: 2800000, guid: b23f7be893365ff478e0b81def0f5423,
+    type: 3}
+  <ColdIcon>k__BackingField: {fileID: 2800000, guid: b9ece184c23e09649ba9bc737b5be6c9,
+    type: 3}
   <Prefab>k__BackingField: {fileID: 4346281860394056716, guid: 0e01c1afd52f3194eb21cbebc4e4e0b4,
     type: 3}
   <MaxVolume>k__BackingField: 120

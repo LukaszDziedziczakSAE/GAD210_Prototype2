@@ -15,13 +15,10 @@ GameObject:
   - component: {fileID: 432633597000550090}
   - component: {fileID: 4878847414418919427}
   - component: {fileID: 3111890199170766982}
-  - component: {fileID: 438942111647527567}
-  - component: {fileID: 3040225750252346064}
-  - component: {fileID: 1092433912303431864}
-  - component: {fileID: 5184896988360237286}
   - component: {fileID: 3748531862760675085}
   - component: {fileID: 5082664177212396111}
   - component: {fileID: 7612323219531684805}
+  - component: {fileID: 3365858318049807418}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -158,66 +155,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxDistance: 2.5
---- !u!114 &438942111647527567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2685991082545510111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 980aee79039d39c4da052099565bca84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <Max>k__BackingField: 100
-  <Current>k__BackingField: 100
-  <ChangeRate>k__BackingField: 0
---- !u!114 &3040225750252346064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2685991082545510111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ecf8cd3b23f36d40a74dd39ec507123, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <Max>k__BackingField: 100
-  <Current>k__BackingField: 60
-  <ChangeRate>k__BackingField: 0
---- !u!114 &1092433912303431864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2685991082545510111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88cf03929c66cc1449af69c1ae33775c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <Max>k__BackingField: 100
-  <Current>k__BackingField: 40
-  <ChangeRate>k__BackingField: 0
---- !u!114 &5184896988360237286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2685991082545510111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0adc284d5928b184d9126fe9c17d4363, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <Max>k__BackingField: 100
-  <Current>k__BackingField: 40
-  <ChangeRate>k__BackingField: 0
 --- !u!114 &3748531862760675085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,26 +167,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8408bab186c52144fba97120623698ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   <Slot1>k__BackingField:
     Item: {fileID: 0}
     Quantity: 0
     Volume: 0
+    Warmed: 0
   <Slot2>k__BackingField:
     Item: {fileID: 0}
     Quantity: 0
     Volume: 0
+    Warmed: 0
   <Slot3>k__BackingField:
     Item: {fileID: 0}
     Quantity: 0
     Volume: 0
+    Warmed: 0
   <Slot4>k__BackingField:
     Item: {fileID: 0}
     Quantity: 0
     Volume: 0
+    Warmed: 0
   <Slot5>k__BackingField:
     Item: {fileID: 0}
     Quantity: 0
     Volume: 0
+    Warmed: 0
   <ActiveSlot>k__BackingField: -1
 --- !u!114 &5082664177212396111
 MonoBehaviour:
@@ -278,6 +221,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1084834057947336419}
   <ObjectInHand>k__BackingField: {fileID: 0}
+  SpawnDistance: 1
+  maxDistance: 2.5
+--- !u!114 &3365858318049807418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2685991082545510111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5142759d77457478809aa2bd776e83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Max>k__BackingField: 100
+  <Current>k__BackingField: 40
+  <ChangeRate>k__BackingField: 0
 --- !u!1 &6776874950277748046
 GameObject:
   m_ObjectHideFlags: 0

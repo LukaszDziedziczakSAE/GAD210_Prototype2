@@ -103,6 +103,18 @@ public class Player_ObjectInHand : MonoBehaviour
         {
             ObjectInHand = Instantiate(player.ActionBar.Slot(player.ActionBar.ActiveSlot).Item.Prefab,
                 objectPosition, Quaternion.identity).GetComponent<Item>();
+            if (ObjectInHand.TryGetComponent<Kettle>(out Kettle kettle))
+            {
+                kettle.CurrentVolume = player.ActionBar.Slot(player.ActionBar.ActiveSlot).Volume;
+                kettle.Cooked = player.ActionBar.Slot(player.ActionBar.ActiveSlot).Warmed;
+            }
+
+            else if (ObjectInHand.TryGetComponent<Cup>(out Cup cup))
+            {
+                cup.CurrentVolume = player.ActionBar.Slot(player.ActionBar.ActiveSlot).Volume;
+                cup.Warm = player.ActionBar.Slot(player.ActionBar.ActiveSlot).Warmed;
+            }
+
             player.Input.OnInteractPress += OnInteractPressed;
         }
     }

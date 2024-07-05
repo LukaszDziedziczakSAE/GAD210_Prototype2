@@ -8,7 +8,7 @@ public class Cup : Item
     public float MaxVolume => Config.MaxVolume;
 
     public float FreeVolume => MaxVolume - CurrentVolume;
-    public bool Cooked
+    public bool Warm
     {
         get
         {
@@ -24,6 +24,6 @@ public class Cup : Item
 
     private void Start()
     {
-        Cooked = false;
+        Warm = false;
     }
 }

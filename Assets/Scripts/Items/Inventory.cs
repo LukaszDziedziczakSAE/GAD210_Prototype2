@@ -12,6 +12,7 @@ public class Inventory : MonoBehaviour
         public ItemConfig Item;
         public int Quantity;
         public float Volume;
+        public bool Warmed;
 
         public float VolumePercentage => Volume / Item.MaxVolume;
         public bool IsFull => VolumePercentage == 1;

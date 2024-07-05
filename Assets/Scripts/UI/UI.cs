@@ -62,6 +62,7 @@ public class UI : MonoBehaviour
         mainMenu.SetActive(false);
         gameUI.SetActive(true);
         ShowCursor(false);
+        Time.timeScale = 1;
     }
 
     public static void PauseGame()

@@ -108,6 +108,20 @@ public class Player_ActionBar : MonoBehaviour
         }
     }
 
+    public Inventory.InvItem CupInvItem
+    {
+        get
+        {
+            for (int i = 1; i <= 5; i++)
+            {
+                if (Slot(i) == null || Slot(i).Item == null) continue;
+                Cup cup = Slot(i).Item.Prefab.GetComponent<Cup>();
+                if (cup != null) return Slot(i);
+            }
+            return null;
+        }
+    }
+
     public void ClearEmptySlots()
     {
         if (Slot1 != null && Slot1.Quantity <= 0) Slot1 = null;

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -41,8 +42,24 @@ public class UI_ActionSlot : MonoBehaviour
     {
         if (slot != null && slot.Item != null && slot.Quantity > 0)
         {
-            if (slot.Item.Icon != null && icon != null) icon.texture = slot.Item.Icon;
-            else icon.texture = null;
+            if (slot.Volume > 0)
+            {
+                if (slot.Warmed)
+                {
+                    if (slot.Item.WarmIcon != null && icon != null) icon.texture = slot.Item.WarmIcon;
+                    else icon.texture = null;
+                }
+                else
+                {
+                    if (slot.Item.ColdIcon != null && icon != null) icon.texture = slot.Item.ColdIcon;
+                    else icon.texture = null;
+                }
+            }
+            else
+            {
+                if (slot.Item.Icon != null && icon != null) icon.texture = slot.Item.Icon;
+                else icon.texture = null;
+            }
         }
         else
         {

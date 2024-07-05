@@ -65,6 +65,7 @@ public class Stove : MonoBehaviour, IInteractable
             if (Kettle != null)
             {
                 Kettle.CurrentVolume = Player.Instance.ActionBar.KettleInvItem.Volume;
+                Kettle.Cooked = Player.Instance.ActionBar.KettleInvItem.Warmed;
                 Player.Instance.ActionBar.RemoveKettle();
             }
         }

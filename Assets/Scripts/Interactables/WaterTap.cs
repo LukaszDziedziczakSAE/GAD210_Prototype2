@@ -11,6 +11,7 @@ public class WaterTap : MonoBehaviour, IInteractable
         if (playerActionBar.KettleInvItem != null && !playerActionBar.KettleInvItem.IsFull)
         {
             playerActionBar.KettleInvItem.Volume = playerActionBar.KettleInvItem.Item.MaxVolume;
+            UI.ActionBar.UpdateSlots();
         }
     }
 
